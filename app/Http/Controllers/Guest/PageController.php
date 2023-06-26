@@ -23,10 +23,10 @@ class PageController extends Controller
         $arrBooks = Book::all();
 
         // filtro per titolo
-        $arrBooks = Book::where('title', 'i promessi sposi')->get();
+        // $arrBooks = Book::where('title', 'i promessi sposi')->get();
 
         // filtro con il like
-        // $arrBooks = Book::where('title', 'LIKE' '%sposi%')->get();
+        // $arrBooks = Book::where('title', 'LIKE' '%sposi%')->orderby('title', 'asc')->get();
 
         return view ('books', compact('arrBooks'));
     }

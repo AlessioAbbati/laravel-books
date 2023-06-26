@@ -25,6 +25,9 @@ class PageController extends Controller
         // filtro per titolo
         $arrBooks = Book::where('title', 'i promessi sposi')->get();
 
+        // filtro con il like
+        // $arrBooks = Book::where('title', 'LIKE' '%sposi%')->get();
+
         return view ('books', compact('arrBooks'));
     }
 }
